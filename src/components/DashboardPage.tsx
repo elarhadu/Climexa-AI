@@ -1,18 +1,18 @@
-import React from 'react';
+// import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
-import { Progress } from './ui/progress';
-import { ImageWithFallback } from './figma/ImageWithFallback';
+// import { Progress } from './ui/progress';
+// import { ImageWithFallback } from './figma/ImageWithFallback';
 import { 
   BarChart3, 
   LineChart, 
   PieChart, 
   Activity,
   Droplets, 
-  Sun, 
+  // Sun, 
   Thermometer,
-  Wind,
+  // Wind,
   Zap,
   AlertTriangle,
   CheckCircle,

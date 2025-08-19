@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
@@ -10,8 +10,8 @@ import {
   Linkedin, 
   Mail,
   Users,
-  Award,
-  Globe,
+  // Award,
+  // Globe,
   Lightbulb
 } from 'lucide-react';
 import Naa from "../assets/naa.jpeg"

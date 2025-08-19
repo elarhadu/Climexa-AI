@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
@@ -163,7 +163,7 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {solutions.map((solution, index) => (
+            {solutions.map((solution, _index) => (
               <Card key={solution.id} className="hover:shadow-lg transition-all duration-300 group">
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between">
