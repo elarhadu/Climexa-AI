@@ -13,7 +13,6 @@ import { type TooltipContentProps } from "recharts/types/component/Tooltip"
 
 import { cn } from "./utils";
 
-// Format: { THEME_NAME: CSS_SELECTOR }
 const THEMES = { light: "", dark: ".dark" } as const
 
 export type ChartConfig = {
