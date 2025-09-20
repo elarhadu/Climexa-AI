@@ -16,7 +16,6 @@ import {
   MapPin, 
   Linkedin, 
   Twitter, 
-  Globe,
   ChevronUp
 } from 'lucide-react';
 import climexaLogo from './assets/climexaai_logo.jpeg';

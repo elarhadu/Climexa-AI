@@ -7,7 +7,6 @@ import {
   Sprout, 
   Snowflake, 
   Brain,
-  ArrowRight,
   Zap,
   Shield,
   Thermometer,
