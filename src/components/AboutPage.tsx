@@ -52,24 +52,34 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
 
   const values = [
     {
+      icon: <Heart className="h-8 w-8 text-destructive" />,
+      title: "Sustainability First",
+      description: "Every decision prioritizes environmental stewardship and long-term ecological balance."
+    },
+    {
+      icon: <Users className="h-8 w-8 text-primary" />,
+      title: "Empowered Communities",
+      description: "We build solutions that strengthen rural communities and improve livelihoods."
+    },
+    {
+      icon: <Lightbulb className="h-8 w-8 text-primary" />,
+      title: "Innovation with Purpose",
+      description: "Technology that serves humanity and addresses real-world challenges."
+    },
+    {
       icon: <Target className="h-8 w-8 text-primary" />,
-      title: "Innovation",
-      description: "We pioneer cutting-edge solutions that push the boundaries of agricultural technology and sustainability."
+      title: "Integrity & Transparency",
+      description: "Open communication and ethical practices in all our partnerships."
     },
     {
-      icon: <Heart className="h-8 w-8 text-red-500" />,
-      title: "Sustainability",
-      description: "Every decision is guided by our commitment to environmental stewardship and future generations."
+      icon: <Users className="h-8 w-8 text-accent" />,
+      title: "Collaboration for Change",
+      description: "Working together with farmers, communities, and stakeholders for collective impact."
     },
     {
-      icon: <Users className="h-8 w-8 text-blue-500" />,
-      title: "Partnership",
-      description: "We believe in collaborative relationships with farmers, communities, and stakeholders."
-    },
-    {
-      icon: <Lightbulb className="h-8 w-8 text-yellow-500" />,
-      title: "Excellence",
-      description: "We strive for the highest standards in technology, service, and environmental impact."
+      icon: <Heart className="h-8 w-8 text-accent" />,
+      title: "Equitable Access",
+      description: "Ensuring sustainable solutions are accessible to all communities, regardless of size or resources."
     }
   ];
 
@@ -77,7 +87,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
     {
       year: "2025",
       title: "Project Kickoff",
-      description: "ClimaFarm AI™ was founded to bring climate-smart agricultural solutions to African farmers."
+      description: "Climexa AI was founded to bring climate-smart agricultural solutions to African farmers."
     },
     {
       year: "2025",
@@ -113,13 +123,13 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 Our Story
               </Badge>
               <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-                Building Climate Resilience Through{' '}
-                <span className="text-primary">Smart Agriculture</span>
+                Building the Future of{' '}
+                <span className="text-primary">Sustainable Farming</span>
               </h1>
               <p className="text-lg text-muted-foreground">
-                Born from the urgent need to address climate change while feeding a growing population, 
-                ClimaFarm AI™ represents the convergence of cutting-edge technology and sustainable 
-                farming practices.
+                Climexa AI is building the future of sustainable farming in Africa and beyond. Our platform 
+                combines agrivoltaics (AgriPV), AI-driven automation, and smart water systems to give farmers 
+                and households reliable energy, clean water, and improved harvests with minimal human intervention.
               </p>
               <Button 
                 size="lg"
@@ -140,13 +150,28 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
         </div>
       </section>
 
+      {/* Mission Section */}
+      {/* <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-6 max-w-4xl mx-auto">
+            <h2 className="text-3xl sm:text-4xl font-bold">
+              Our Mission
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              To empower rural communities with intelligent, self-sustaining agricultural and energy systems 
+              that harness renewable power, deliver clean water, and optimize food production through AI-driven automation.
+            </p>
+          </div>
+        </div>
+      </section> */}
+
       {/* Company Story */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto space-y-12">
             <div className="text-center space-y-4">
               <h2 className="text-3xl sm:text-4xl font-bold">
-                The ClimaFarm AI™ Story
+                The Climexa AI Story
               </h2>
               <p className="text-lg text-muted-foreground">
                 Our journey began with a simple yet powerful vision: transform agriculture 
@@ -164,7 +189,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 <p>
                 We imagined a future where farms could thrive while regenerating the environment, 
                 leveraging technology to work in harmony with nature. This vision inspired the creation 
-                of ClimaFarm AI™ – a platform integrating AI-driven solutions and climate-smart farming practices.
+                of Climexa AI – a platform integrating AI-driven solutions and climate-smart farming practices.
                 </p>
                 <p>
                 As we launch our project, our focus is on piloting solutions that improve water efficiency, 
@@ -188,16 +213,15 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
               </CardHeader>
               <CardContent className="text-center">
                 <CardDescription className="text-base">
-                  To empower farmers worldwide with AI-driven, sustainable agricultural solutions 
-                  that enhance productivity, reduce environmental impact, and build climate resilience 
-                  for future generations.
+                To empower rural communities with intelligent, self-sustaining agricultural and energy systems 
+                that harness renewable power, deliver clean water, and optimize food production through AI-driven automation.
                 </CardDescription>
               </CardContent>
             </Card>
 
             <Card className="border-0 shadow-lg">
               <CardHeader className="text-center pb-6">
-                <Eye className="h-12 w-12 text-secondary mx-auto mb-4" />
+                <Eye className="h-12 w-12 text-primary mx-auto mb-4" />
                 <CardTitle className="text-2xl">Our Vision</CardTitle>
               </CardHeader>
               <CardContent className="text-center">
@@ -355,7 +379,7 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                 variant="outline" 
                 size="lg"
                 onClick={() => onNavigate('solutions')}
-                className="text-base border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="text-base border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
               >
                 Explore Solutions
               </Button>

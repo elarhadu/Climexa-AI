@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Button } from './ui/button';
 import { Menu, X, Globe } from 'lucide-react';
+import climexaLogo from '../assets/climexaai_logo.jpeg';
 
 interface NavigationProps {
   currentPage: string;
@@ -14,6 +15,7 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
     { id: 'home', label: 'Home' },
     { id: 'solutions', label: 'Solutions' },
     { id: 'about', label: 'About Us' },
+    { id: 'how-it-works', label: 'How It Works' },
     { id: 'dashboard', label: 'Dashboard Preview' },
     { id: 'blog', label: 'Insights' },
     { id: 'contact', label: 'Contact' }
@@ -26,7 +28,11 @@ export function Navigation({ currentPage, onNavigate }: NavigationProps) {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex-shrink-0">
-              <span className="text-2xl font-bold text-primary">ClimaFarm AI™</span>
+              <img 
+                src={climexaLogo} 
+                alt="Climexa AI " 
+                className="h-16 w-auto"
+              />
             </div>
           </div>
 

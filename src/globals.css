@@ -2,80 +2,82 @@
 
 :root {
   --font-size: 14px;
-  --background: #ffffff;
-  --foreground: oklch(0.145 0 0);
-  --card: #ffffff;
-  --card-foreground: oklch(0.145 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.145 0 0);
-  --primary: #2d5a27;  /* Forest green for nature/sustainability */
-  --primary-foreground: oklch(1 0 0);
-  --secondary: #4a90a4;  /* Blue for water/tech */
-  --secondary-foreground: #ffffff;
-  --muted: #f5f7f0;  /* Light green tint */
-  --muted-foreground: #6b7280;
-  --accent: #8fbc8f;  /* Sage green */
-  --accent-foreground: #1f2937;
+  --background: #1a3d1a; /* Deep forest green as primary background */
+  --foreground: #ffffff; /* White text for contrast */
+  --card: #2d5a27; /* Darker green for cards */
+  --card-foreground: #ffffff; /* White text on cards */
+  --popover: #2d5a27; /* Dark green for popovers */
+  --popover-foreground: #ffffff; /* White text on popovers */
+  --primary: #4ade80; /* Bright green for primary actions */
+  --primary-foreground: #000000; /* Black text on bright green */
+  --secondary: #22c55e; /* Medium green for secondary elements */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+  --muted: #365f32; /* Muted green background */
+  --muted-foreground: #a3d977; /* Light green text on muted background */
+  --accent: #16a34a; /* Accent green */
+  --accent-foreground: #ffffff; /* White text on accent */
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: rgba(45, 90, 39, 0.1);  /* Subtle green border */
+  --border: rgba(255, 255, 255, 0.1); /* Subtle white border */
   --input: transparent;
-  --input-background: #f9fdf7;  /* Very light green */
-  --switch-background: #d1d5db;
+  --input-background: #365f32; /* Dark green input background */
+  --switch-background: #4ade80;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: oklch(0.708 0 0);
-  --chart-1: #2d5a27;  /* Primary green */
-  --chart-2: #4a90a4;  /* Secondary blue */
-  --chart-3: #8fbc8f;  /* Sage green */
-  --chart-4: #cd853f;  /* Earth tone */
-  --chart-5: #90ee90;  /* Light green */
-  --radius: 0.75rem;  /* Slightly more rounded for modern feel */
-  --sidebar: oklch(0.985 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: #2d5a27;
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --ring: #4ade80;
+  --chart-1: #4ade80; /* Bright green */
+  --chart-2: #22c55e; /* Medium green */
+  --chart-3: #16a34a; /* Dark green */
+  --chart-4: #15803d; /* Darker green */
+  --chart-5: #a3d977; /* Light green */
+  --radius: 0.75rem; /* Slightly more rounded for modern feel */
+  --sidebar: #1a3d1a; /* Deep green sidebar */
+  --sidebar-foreground: #ffffff; /* White text on sidebar */
+  --sidebar-primary: #4ade80; /* Bright green for sidebar primary */
+  --sidebar-primary-foreground: #000000; /* Black text on bright green */
+  --sidebar-accent: #2d5a27; /* Dark green for sidebar accent */
+  --sidebar-accent-foreground: #ffffff; /* White text on sidebar accent */
+  --sidebar-border: rgba(255, 255, 255, 0.1); /* Subtle white border */
+  --sidebar-ring: #4ade80;
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
+  --background: #0f2410; /* Even darker green for dark mode */
+  --foreground: #ffffff; /* White text for contrast */
+  --card: #1a3d1a; /* Dark green cards */
+  --card-foreground: #ffffff; /* White text on cards */
+  --popover: #1a3d1a; /* Dark green popovers */
+  --popover-foreground: #ffffff; /* White text on popovers */
+  --primary: #4ade80; /* Bright green for primary actions */
+  --primary-foreground: #000000; /* Black text on bright green */
+  --secondary: #22c55e; /* Medium green for secondary elements */
+  --secondary-foreground: #ffffff; /* White text on secondary */
+  --muted: #2d5a27; /* Muted green background */
+  --muted-foreground: #a3d977; /* Light green text on muted background */
+  --accent: #16a34a; /* Accent green */
+  --accent-foreground: #ffffff; /* White text on accent */
+  --destructive: #dc2626;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.1); /* Subtle white border */
+  --input: transparent;
+  --input-background: #2d5a27; /* Dark green input background */
+  --switch-background: #4ade80;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --ring: #4ade80;
+  --chart-1: #4ade80; /* Bright green */
+  --chart-2: #22c55e; /* Medium green */
+  --chart-3: #16a34a; /* Dark green */
+  --chart-4: #15803d; /* Darker green */
+  --chart-5: #a3d977; /* Light green */
+  --sidebar: #0f2410; /* Darkest green sidebar */
+  --sidebar-foreground: #ffffff; /* White text on sidebar */
+  --sidebar-primary: #4ade80; /* Bright green for sidebar primary */
+  --sidebar-primary-foreground: #000000; /* Black text on bright green */
+  --sidebar-accent: #1a3d1a; /* Dark green for sidebar accent */
+  --sidebar-accent-foreground: #ffffff; /* White text on sidebar accent */
+  --sidebar-border: rgba(255, 255, 255, 0.1); /* Subtle white border */
+  --sidebar-ring: #4ade80;
 }
 
 @theme inline {

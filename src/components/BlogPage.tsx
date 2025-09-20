@@ -120,7 +120,7 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
               Insights & Research
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
-              ClimaFarm AI™{' '}
+              Climexa AI ™{' '}
               <span className="text-primary">Insights Hub</span>
             </h1>
             <p className="text-lg text-muted-foreground">

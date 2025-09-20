@@ -70,17 +70,17 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
       description: "Live data streams from all sensors and systems"
     },
     {
-      icon: <BarChart3 className="h-6 w-6 text-blue-500" />,
+      icon: <BarChart3 className="h-6 w-6 text-primary" />,
       title: "Advanced Analytics",
       description: "AI-powered insights and predictive modeling"
     },
     {
-      icon: <AlertTriangle className="h-6 w-6 text-orange-500" />,
+      icon: <AlertTriangle className="h-6 w-6 text-destructive" />,
       title: "Smart Alerts",
       description: "Proactive notifications for optimal farm management"
     },
     {
-      icon: <Smartphone className="h-6 w-6 text-purple-500" />,
+      icon: <Smartphone className="h-6 w-6 text-accent" />,
       title: "Mobile Access",
       description: "Full platform access from any device, anywhere"
     }
@@ -97,7 +97,7 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
               Experience the{' '}
-              <span className="text-primary">ClimaFarm AI™ Dashboard</span>
+              <span className="text-primary">Climexa AI Dashboard</span>
             </h1>
             <p className="text-lg text-muted-foreground">
               Get a glimpse of our comprehensive platform that puts the power of AI-driven 
@@ -149,7 +149,7 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-2">
-                    <Zap className="h-5 w-5 text-yellow-500" />
+                    <Zap className="h-5 w-5 text-primary" />
                     <span className="text-sm font-medium">Energy Production</span>
                   </div>
                   <div className="mt-2">
@@ -165,7 +165,7 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-2">
-                    <Droplets className="h-5 w-5 text-blue-500" />
+                    <Droplets className="h-5 w-5 text-secondary" />
                     <span className="text-sm font-medium">Water Usage</span>
                   </div>
                   <div className="mt-2">
@@ -181,7 +181,7 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
               <Card>
                 <CardContent className="p-6">
                   <div className="flex items-center space-x-2">
-                    <Thermometer className="h-5 w-5 text-red-500" />
+                    <Thermometer className="h-5 w-5 text-destructive" />
                     <span className="text-sm font-medium">Temperature</span>
                   </div>
                   <div className="mt-2">
@@ -393,7 +393,7 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
             <Card className="text-center">
               <CardHeader>
                 <div className="flex justify-center mb-4">
-                  <Tablet className="h-12 w-12 text-secondary" />
+                  <Tablet className="h-12 w-12 text-primary" />
                 </div>
                 <CardTitle>Tablet Interface</CardTitle>
               </CardHeader>
@@ -432,7 +432,7 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
             </h2>
             <p className="text-lg opacity-90">
               Schedule a personalized demo to explore all features and see how 
-              ClimaFarm AI™ can transform your agricultural operations.
+              Climexa AI can transform your agricultural operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -447,7 +447,7 @@ export function DashboardPage({ onNavigate }: DashboardPageProps) {
                 variant="outline" 
                 size="lg"
                 onClick={() => onNavigate('solutions')}
-                className="text-base border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="text-base border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
               >
                 Explore Solutions
               </Button>

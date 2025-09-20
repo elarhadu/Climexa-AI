@@ -3,6 +3,7 @@ import { Navigation } from './components/Navigation';
 import { HomePage } from './components/HomePage';
 import { SolutionsPage } from './components/SolutionsPage';
 import { AboutPage } from './components/AboutPage';
+import { HowItWorksPage } from './components/HowItWorksPage';
 import { DashboardPage } from './components/DashboardPage';
 import { BlogPage } from './components/BlogPage';
 import { ContactPage } from './components/ContactPage';
@@ -16,9 +17,9 @@ import {
   Linkedin, 
   Twitter, 
   Globe,
-  Leaf,
   ChevronUp
 } from 'lucide-react';
+import climexaLogo from './assets/climexaai_logo.jpeg';
 
 export default function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -54,6 +55,8 @@ export default function App() {
         return <SolutionsPage onNavigate={handleNavigate} />;
       case 'about':
         return <AboutPage onNavigate={handleNavigate} />;
+      case 'how-it-works':
+        return <HowItWorksPage onNavigate={handleNavigate} />;
       case 'dashboard':
         return <DashboardPage onNavigate={handleNavigate} />;
       case 'blog':
@@ -109,8 +112,11 @@ export default function App() {
             {/* Company Info */}
             <div className="lg:col-span-2 space-y-4">
               <div className="flex items-center space-x-2">
-                <Leaf className="h-8 w-8 text-primary" />
-                <span className="text-2xl font-bold text-primary">ClimaFarm AI™</span>
+                <img 
+                  src={climexaLogo} 
+                  alt="Climexa AI " 
+                  className="h-16 w-auto"
+                />
               </div>
               <p className="text-muted-foreground max-w-md">
                 Transforming agriculture through AI-powered sustainable solutions. 
@@ -123,11 +129,11 @@ export default function App() {
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Phone className="h-4 w-4" />
-                  <span>+44 1234 567890</span>
+                  <span>+44 7555 819582</span>
                 </div>
                 <div className="flex items-center space-x-2 text-sm text-muted-foreground">
                   <Mail className="h-4 w-4" />
-                  <span>info@climafarm.ai</span>
+                  <span>info@climexaai.com</span>
                 </div>
               </div>
             </div>
@@ -223,20 +229,19 @@ export default function App() {
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-sm text-muted-foreground">
-              © 2025 ClimaFarm AI™. All rights reserved.
+              © 2025 Climexa AI ™. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-4">
               <span className="text-sm text-muted-foreground">Follow us:</span>
               <div className="flex space-x-2">
                 <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                  <a href="https://www.linkedin.com/in/climexa-ai" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-4 w-4" />
+                  </a>
                 </Button>
                 <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
                   <Twitter className="h-4 w-4" />
-                </Button>
-                <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                  <Globe className="h-4 w-4" />
                 </Button>
               </div>
             </div>

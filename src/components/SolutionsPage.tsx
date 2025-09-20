@@ -2,16 +2,16 @@
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
+import { Counter } from './Counter';
 import { 
-  BarChart3, 
   Droplets, 
   Shield, 
   Wheat, 
-  Wrench,
   ArrowRight,
   Zap,
-  Gauge,
-  Activity
+  Sprout,
+  Snowflake,
+  Brain
 } from 'lucide-react';
 
 interface SolutionsPageProps {
@@ -21,96 +21,130 @@ interface SolutionsPageProps {
 export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
   const solutions = [
     {
-      id: 'energy-dashboard',
-      icon: <BarChart3 className="h-8 w-8 text-yellow-500" />,
-      title: "Energy Dashboard",
-      description: "Monitor and optimize your agrivoltaic system performance with real-time energy generation tracking, weather forecasting, and intelligent panel positioning.",
+      id: 'energy-plus',
+      icon: <Zap className="h-8 w-8 text-primary" />,
+      title: "Energy+",
+      description: "Autonomous AgriPV power for homes and farms. Generate clean energy while optimizing crop yields with intelligent solar panel positioning.",
       features: [
-        "Real-time energy generation monitoring",
-        "Weather-based optimization algorithms", 
-        "ROI tracking and reporting",
-        "Grid integration management"
+        "AgriPV solar panel installation",
+        "Dual-purpose land optimization",
+        "Energy storage systems",
+        "Grid integration and backup power"
       ],
-      badge: "Core Platform",
+      badge: "Core Module",
       image: "energy"
     },
     {
-      id: 'smart-irrigation',
-      icon: <Droplets className="h-8 w-8 text-blue-500" />,
-      title: "Smart Irrigation",
-      description: "AI-powered irrigation system that analyzes soil moisture, weather patterns, and crop needs to deliver precise water management.",
+      id: 'water-plus',
+      icon: <Droplets className="h-8 w-8 text-secondary" />,
+      title: "Water+",
+      description: "Borehole pumping, AI-driven treatment, and potable water delivery. Ensure clean, safe water for both irrigation and household use.",
       features: [
-        "Soil moisture sensor integration",
+        "Smart borehole pumping systems",
+        "AI-powered water treatment",
+        "Real-time quality monitoring",
+        "Automated distribution networks"
+      ],
+      badge: "Essential Module",
+      image: "water"
+    },
+    {
+      id: 'irrigate-plus',
+      icon: <Sprout className="h-8 w-8 text-accent" />,
+      title: "Irrigate+",
+      description: "Smart irrigation system with soil & weather forecasting. Optimize water usage with AI-driven precision agriculture.",
+      features: [
+        "Soil moisture sensor networks",
         "Weather pattern analysis",
-        "Crop-specific water scheduling",
-        "Water usage optimization"
+        "Precision irrigation control",
+        "Crop-specific optimization"
       ],
       badge: "AI-Powered",
       image: "irrigation"
     },
     {
-      id: 'water-quality',
-      icon: <Shield className="h-8 w-8 text-green-500" />,
-      title: "Water Quality & Treatment",
-      description: "Advanced monitoring and treatment systems ensure clean, safe water for irrigation while maintaining optimal nutrient levels.",
+      id: 'preserve-plus',
+      icon: <Snowflake className="h-8 w-8 text-primary" />,
+      title: "Preserve+",
+      description: "Solar cold-chain storage for crops, reducing food loss. Extend shelf life and ensure food security with renewable-powered preservation.",
       features: [
-        "Real-time water quality monitoring",
-        "Automated treatment systems",
-        "Nutrient level optimization",
-        "Contamination detection alerts"
+        "Solar-powered cold storage",
+        "Temperature-controlled environments",
+        "Post-harvest loss reduction",
+        "Food security optimization"
       ],
-      badge: "Environmental",
-      image: "water"
+      badge: "Storage Module",
+      image: "preservation"
     },
     {
-      id: 'crop-preservation',
-      icon: <Wheat className="h-8 w-8 text-amber-500" />,
-      title: "Crop Preservation",
-      description: "Protect and optimize crop growth with environmental monitoring, disease detection, and climate-controlled microenvironments.",
+      id: 'climafarm-platform',
+      icon: <Brain className="h-8 w-8 text-accent" />,
+      title: "Climexa AI Platform",
+      description: "The brain that integrates all modules into one seamless, self-running system. Complete automation and coordination of your agricultural ecosystem.",
       features: [
-        "Disease and pest detection",
-        "Climate monitoring & control",
-        "Growth pattern analysis",
-        "Harvest optimization"
+        "Unified AI management platform",
+        "Automated system coordination",
+        "Predictive analytics and insights",
+        "Minimal human intervention"
       ],
-      badge: "Smart Agriculture",
-      image: "crops"
-    },
-    {
-      id: 'predictive-maintenance',
-      icon: <Wrench className="h-8 w-8 text-purple-500" />,
-      title: "Predictive Maintenance",
-      description: "Prevent costly equipment failures with AI-powered maintenance scheduling and equipment health monitoring.",
-      features: [
-        "Equipment health monitoring",
-        "Failure prediction algorithms",
-        "Maintenance scheduling automation",
-        "Cost optimization insights"
-      ],
-      badge: "Predictive AI",
-      image: "maintenance"
-    },
-    {
-      id: 'analytics-platform',
-      icon: <Activity className="h-8 w-8 text-indigo-500" />,
-      title: "Analytics Platform",
-      description: "Comprehensive data analytics and insights platform providing actionable intelligence for farm operations and sustainability metrics.",
-      features: [
-        "Performance analytics dashboard",
-        "Sustainability reporting",
-        "ROI and cost analysis",
-        "Predictive modeling"
-      ],
-      badge: "Business Intelligence",
-      image: "analytics"
+      badge: "Integration Hub",
+      image: "platform"
     }
   ];
 
   const stats = [
-    { label: "Water Savings", value: "40%", icon: <Droplets className="h-5 w-5 text-blue-500" /> },
-    { label: "Energy Generation", value: "25MW", icon: <Zap className="h-5 w-5 text-yellow-500" /> },
-    { label: "Crop Yield Increase", value: "18%", icon: <Wheat className="h-5 w-5 text-green-500" /> },
-    { label: "Maintenance Cost Reduction", value: "35%", icon: <Gauge className="h-5 w-5 text-purple-500" /> }
+    { 
+      label: "Water Waste Reduction", 
+      value: 40, 
+      suffix: "%", 
+      icon: <Droplets className="h-5 w-5 text-accent" /> 
+    },
+    { 
+      label: "Crop Yield Increase", 
+      value: 18, 
+      suffix: "%", 
+      icon: <Wheat className="h-5 w-5 text-green-500" /> 
+    },
+    { 
+      label: "Post-Harvest Loss Reduction", 
+      value: 35, 
+      suffix: "%", 
+      icon: <Snowflake className="h-5 w-5 text-primary" /> 
+    },
+    { 
+      label: "CO₂ Emissions Avoided", 
+      value: 2.5, 
+      suffix: " tons/year", 
+      icon: <Shield className="h-5 w-5 text-accent" /> 
+    }
+  ];
+
+  const differentiators = [
+    {
+      icon: "🔄",
+      title: "Fully Integrated",
+      description: "One platform for power, water, irrigation, and preservation."
+    },
+    {
+      icon: "🧠",
+      title: "AI-Driven",
+      description: "Smart forecasts and automation for minimal human effort."
+    },
+    {
+      icon: "⚡",
+      title: "Energy-Aware",
+      description: "Adapts operations to available solar power."
+    },
+    {
+      icon: "🌍",
+      title: "Community Impact",
+      description: "Improves food security, resilience, and livelihoods."
+    },
+    {
+      icon: "📊",
+      title: "Scalable",
+      description: "Works for single farms, villages, and regional clusters."
+    }
   ];
 
   return (
@@ -135,13 +169,18 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
           {/* Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             {stats.map((stat, index) => (
-              <Card key={index} className="text-center">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 group">
                 <CardContent className="pt-6">
-                  <div className="flex justify-center mb-2">
+                  <div className="flex justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <div className="text-2xl font-bold text-primary">{stat.value}</div>
-                  <div className="text-sm text-muted-foreground">{stat.label}</div>
+                  <Counter 
+                    value={stat.value} 
+                    suffix={stat.suffix}
+                    className="text-2xl font-bold text-primary"
+                    duration={2000 + (index * 200)}
+                  />
+                  <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
                 </CardContent>
               </Card>
             ))}
@@ -212,8 +251,35 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
         </div>
       </section>
 
-      {/* Integration Section */}
+      {/* Why Climexa AI Is Different */}
       <section className="py-20 bg-muted/50">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center space-y-6 max-w-4xl mx-auto mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold">
+              Why Climexa AI Is Different
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Our integrated approach sets us apart from traditional agricultural solutions 
+              by creating a complete ecosystem that works together seamlessly.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+            {differentiators.map((item, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
+                <CardContent className="pt-6">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
+                  <p className="text-muted-foreground">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Integration Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 max-w-4xl mx-auto">
             <h2 className="text-3xl sm:text-4xl font-bold">
@@ -301,7 +367,7 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
                 variant="outline" 
                 size="lg"
                 onClick={() => onNavigate('dashboard')}
-                className="text-base border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="text-base border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
               >
                 View Platform Demo
               </Button>

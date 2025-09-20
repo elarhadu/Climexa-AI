@@ -29,12 +29,12 @@ export function HomePage({ onNavigate }: HomePageProps) {
       description: "Advanced machine learning for predictive farming decisions"
     },
     {
-      icon: <Zap className="h-8 w-8 text-secondary" />,
+      icon: <Zap className="h-8 w-8 text-primary" />,
       title: "Smart Energy",
       description: "Agrivoltaic systems that optimize energy production and crop yield"
     },
     {
-      icon: <Droplets className="h-8 w-8 text-blue-500" />,
+      icon: <Droplets className="h-8 w-8 text-accent" />,
       title: "Water Management",
       description: "Precision irrigation and water quality monitoring"
     },
@@ -47,22 +47,22 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   const benefits = [
     {
-      icon: <Droplets className="h-6 w-6 text-blue-500" />,
+      icon: <Droplets className="h-6 w-6 text-accent" />,
       title: "Optimize Irrigation",
       description: "AI-driven water management reduces usage by up to 40% while improving crop health."
     },
     {
-      icon: <Sun className="h-6 w-6 text-yellow-500" />,
+      icon: <Sun className="h-6 w-6 text-primary" />,
       title: "Smarter Energy Use",
       description: "Generate clean energy above crops with intelligent solar panel positioning."
     },
     {
-      icon: <Shield className="h-6 w-6 text-green-500" />,
+      icon: <Shield className="h-6 w-6 text-accent" />,
       title: "Ensure Clean Water",
       description: "Advanced filtration and monitoring systems maintain water purity."
     },
     {
-      icon: <AlertTriangle className="h-6 w-6 text-orange-500" />,
+      icon: <AlertTriangle className="h-6 w-6 text-destructive" />,
       title: "Predict Failures",
       description: "Proactive maintenance alerts prevent costly equipment breakdowns."
     }
@@ -70,7 +70,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
 
   const testimonials = [
     {
-      quote: "ClimaFarm AI has transformed our irrigation efficiency by 35%. The predictive analytics are game-changing.",
+      quote: "Climexa AI  has transformed our irrigation efficiency by 35%. The predictive analytics are game-changing.",
       author: "Jane Doe",
       role: "Farm Manager",
       company: "XYZ Farms",
@@ -116,10 +116,10 @@ export function HomePage({ onNavigate }: HomePageProps) {
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
-                  onClick={() => onNavigate('dashboard')}
+                  onClick={() => onNavigate('how-it-works')}
                   className="text-base"
                 >
-                  Discover Our Platform
+                  How It Works
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
                 <Button 
@@ -128,7 +128,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                   onClick={() => onNavigate('contact')}
                   className="text-base"
                 >
-                  Get Involved
+                  Get Started
                 </Button>
               </div>
             </div>
@@ -151,7 +151,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-4 mb-16">
             <h2 className="text-3xl sm:text-4xl font-bold">
-              The ClimaFarm AI™ Platform
+              The Climexa AI Platform
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Our integrated solution combines cutting-edge AI with proven agricultural practices 
@@ -221,7 +221,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Hear from our pilot partners who are already experiencing the benefits of 
-              ClimaFarm AI™ technology.
+              Climexa AI technology.
             </p>
           </div>
 
@@ -231,7 +231,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 <CardHeader>
                   <div className="flex items-center space-x-1 mb-2">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-yellow-400 text-yellow-400" />
+                      <Star key={i} className="h-4 w-4 fill-primary text-primary" />
                     ))}
                   </div>
                   <CardDescription className="text-base italic">
@@ -260,7 +260,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
             </h2>
             <p className="text-lg opacity-90">
               Join the sustainable agriculture revolution. Partner with us to bring 
-              ClimaFarm AI™ to your community and create a more resilient future.
+              Climexa AI to your community and create a more resilient future.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -275,7 +275,7 @@ export function HomePage({ onNavigate }: HomePageProps) {
                 variant="outline" 
                 size="lg"
                 onClick={() => onNavigate('about')}
-                className="text-base border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="text-base border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
               >
                 Learn More
               </Button>

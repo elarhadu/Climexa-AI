@@ -13,17 +13,22 @@ import {
   Clock,
   Send,
   CheckCircle,
-  Globe,
   Linkedin,
   Twitter,
   MessageSquare
 } from 'lucide-react';
+
+// Import the Formspree useForm hook
+import { useForm, ValidationError } from '@formspree/react';
 
 interface ContactPageProps {
   onNavigate: (page: string) => void;
 }
 
 export function ContactPage({ onNavigate }: ContactPageProps) {
+  // Use the useForm hook with your Form ID
+  const [state, handleSubmit] = useForm("mwpngrjb"); 
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -33,7 +38,8 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
     message: ''
   });
 
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  // Check if form submission was successful
+  const isSubmitted = state.succeeded;
 
   const handleInputChange = (field: string, value: string) => {
     setFormData(prev => ({
@@ -42,37 +48,18 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    // Simulate form submission
-    setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        farmSize: '',
-        inquiryType: '',
-        message: ''
-      });
-    }, 3000);
-  };
-
   const contactInfo = [
     {
       icon: <Mail className="h-6 w-6 text-primary" />,
       title: "Email Us",
-      details: "info@climafarm.ai",
+      details: "info@climexaai.com",
       description: "General inquiries and support"
     },
     {
-      icon: <Phone className="h-6 w-6 text-secondary" />,
+      icon: <Phone className="h-6 w-6 text-primary" />,
       title: "Call Us",
-      details: "+44 1234 567890",
-      description: "Monday - Friday, 9 AM - 6 PM"
+      details: "+44 7555 819582",
+      description: "Monday - Friday, 9 AM - 5 PM"
     },
     {
       icon: <MapPin className="h-6 w-6 text-accent" />,
@@ -81,7 +68,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
       description: "Schedule an appointment"
     },
     {
-      icon: <MessageSquare className="h-6 w-6 text-blue-500" />,
+      icon: <MessageSquare className="h-6 w-6 text-primary" />,
       title: "Live Chat",
       details: "Available on our website",
       description: "Real-time support during business hours"
@@ -89,15 +76,12 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
   ];
 
   const officeHours = [
-    { day: "Monday - Friday", hours: "9:00 AM - 6:00 PM" },
-    { day: "Saturday", hours: "10:00 AM - 2:00 PM" },
-    { day: "Sunday", hours: "Closed" }
+    { day: "Monday - Friday", hours: "9:00 AM - 5:00 PM" }
   ];
 
   const socialLinks = [
-    { icon: <Linkedin className="h-5 w-5" />, name: "LinkedIn", url: "#" },
-    { icon: <Twitter className="h-5 w-5" />, name: "Twitter", url: "#" },
-    { icon: <Globe className="h-5 w-5" />, name: "Website", url: "#" }
+    { icon: <Linkedin className="h-5 w-5" />, name: "LinkedIn", url: "https://www.linkedin.com/in/climexa-ai" },
+    { icon: <Twitter className="h-5 w-5" />, name: "Twitter", url: "#" }
   ];
 
   return (
@@ -111,7 +95,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
             </Badge>
             <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
               Contact{' '}
-              <span className="text-primary">ClimaFarm AI™</span>
+              <span className="text-primary">Climexa AI ™</span>
             </h1>
             <p className="text-lg text-muted-foreground">
               Ready to transform your agricultural operations? We're here to help you explore 
@@ -156,6 +140,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                           <Input
                             id="name"
                             type="text"
+                            name="name" // Add the name attribute for Formspree
                             value={formData.name}
                             onChange={(e) => handleInputChange('name', e.target.value)}
                             placeholder="Your full name"
@@ -167,10 +152,17 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                           <Input
                             id="email"
                             type="email"
+                            name="email" // Add the name attribute
                             value={formData.email}
                             onChange={(e) => handleInputChange('email', e.target.value)}
                             placeholder="your.email@example.com"
                             required
+                          />
+                          {/* Optional: Add a ValidationError component for email */}
+                          <ValidationError 
+                            prefix="Email" 
+                            field="email"
+                            errors={state.errors}
                           />
                         </div>
                       </div>
@@ -181,6 +173,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                           <Input
                             id="company"
                             type="text"
+                            name="company" // Add the name attribute
                             value={formData.company}
                             onChange={(e) => handleInputChange('company', e.target.value)}
                             placeholder="Your organization"
@@ -200,6 +193,8 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                               <SelectItem value="other">Other/Not applicable</SelectItem>
                             </SelectContent>
                           </Select>
+                          {/* Hidden input to submit the select value */}
+                          <input type="hidden" name="farmSize" value={formData.farmSize} />
                         </div>
                       </div>
 
@@ -220,24 +215,39 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                             <SelectItem value="other">Other</SelectItem>
                           </SelectContent>
                         </Select>
+                        {/* Hidden input to submit the select value */}
+                        <input type="hidden" name="inquiryType" value={formData.inquiryType} />
                       </div>
 
                       <div className="space-y-2">
                         <Label htmlFor="message">Message *</Label>
                         <Textarea
                           id="message"
+                          name="message" // Add the name attribute
                           value={formData.message}
                           onChange={(e) => handleInputChange('message', e.target.value)}
                           placeholder="Tell us more about your needs and how we can help..."
                           rows={6}
                           required
                         />
+                         <ValidationError 
+                            prefix="Message" 
+                            field="message"
+                            errors={state.errors}
+                          />
                       </div>
 
-                      <Button type="submit" className="w-full" size="lg">
+                      <Button type="submit" className="w-full" size="lg" disabled={state.submitting}>
                         <Send className="h-4 w-4 mr-2" />
                         Send Message
                       </Button>
+
+                      {/* Optional: Display general form errors */}
+                      {state.errors && (
+                        <p className="text-sm text-red-500 text-center">
+                          {state.errors.getFormErrors().map(err => err.message)}
+                        </p>
+                      )}
 
                       <p className="text-sm text-muted-foreground text-center">
                         By submitting this form, you agree to our privacy policy and terms of service.
@@ -253,7 +263,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
               <div>
                 <h2 className="text-2xl font-bold mb-4">Get In Touch</h2>
                 <p className="text-muted-foreground mb-6">
-                  Our team is here to help you explore how ClimaFarm AI™ can transform 
+                  Our team is here to help you explore how Climexa AI can transform 
                   your agricultural operations.
                 </p>
               </div>
@@ -318,34 +328,6 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
         </div>
       </section>
 
-      {/* Map Placeholder */}
-      <section className="py-16 bg-muted/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-8">
-            <h2 className="text-2xl font-bold">Find Us</h2>
-            <p className="text-muted-foreground">
-              Visit our headquarters in the heart of San Francisco's innovation district
-            </p>
-          </div>
-
-          <Card className="overflow-hidden">
-            <div className="h-96 bg-gradient-to-br from-primary/10 to-secondary/10 flex items-center justify-center">
-              <div className="text-center space-y-4">
-                <MapPin className="h-12 w-12 text-primary mx-auto" />
-                <div>
-                  <h4 className="font-semibold">ClimaFarm AI™ Headquarters</h4>
-                  <p className="text-muted-foreground">123 Innovation Drive</p>
-                  <p className="text-muted-foreground">United Kingdom</p>
-                </div>
-                <Button variant="outline">
-                  Get Directions
-                </Button>
-              </div>
-            </div>
-          </Card>
-        </div>
-      </section>
-
       {/* FAQ Section */}
       <section className="py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -383,18 +365,6 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-lg">Do you offer financing options?</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <CardDescription>
-                  Yes, we work with various financing partners to provide flexible payment 
-                  options, including lease-to-own and performance-based agreements.
-                </CardDescription>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
                 <CardTitle className="text-lg">What ongoing support do you provide?</CardTitle>
               </CardHeader>
               <CardContent>
@@ -417,7 +387,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
             </h2>
             <p className="text-lg opacity-90">
               Join the growing community of farmers who are building a more sustainable 
-              and profitable future with ClimaFarm AI™.
+              and profitable future with Climexa AI ™.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
@@ -432,7 +402,7 @@ export function ContactPage({ onNavigate }: ContactPageProps) {
                 variant="outline" 
                 size="lg"
                 onClick={() => onNavigate('about')}
-                className="text-base border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="text-base border-primary text-primary hover:bg-primary-foreground hover:text-primary"
               >
                 Learn More About Us
               </Button>
