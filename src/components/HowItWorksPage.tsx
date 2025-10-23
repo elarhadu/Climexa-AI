@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Button } from './ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from './ui/card';
 import { Badge } from './ui/badge';
@@ -20,7 +19,6 @@ interface HowItWorksPageProps {
 }
 
 export function HowItWorksPage({ onNavigate }: HowItWorksPageProps) {
-  const [selectedVideo, setSelectedVideo] = useState<string | null>(null);
 
   const steps = [
     {
@@ -101,7 +99,7 @@ export function HowItWorksPage({ onNavigate }: HowItWorksPageProps) {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {steps.map((step, index) => (
+            {steps.map((step) => (
               <Dialog key={step.number}>
                 <DialogTrigger asChild>
                   <Card className="hover:shadow-xl transition-all duration-300 group cursor-pointer bg-white border-green-200 hover:border-green-400">
