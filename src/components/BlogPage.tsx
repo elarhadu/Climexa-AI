@@ -377,7 +377,7 @@ export function BlogPage({ onNavigate }: BlogPageProps) {
                 variant="outline" 
                 size="lg"
                 onClick={() => onNavigate('solutions')}
-                className="text-base border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary"
+                className="text-base border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
               >
                 Explore Solutions
               </Button>

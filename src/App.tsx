@@ -4,7 +4,6 @@ import { HomePage } from './components/HomePage';
 import { SolutionsPage } from './components/SolutionsPage';
 import { AboutPage } from './components/AboutPage';
 import { HowItWorksPage } from './components/HowItWorksPage';
-import { DashboardPage } from './components/DashboardPage';
 import { BlogPage } from './components/BlogPage';
 import { ContactPage } from './components/ContactPage';
 import { Button } from './components/ui/button';
@@ -56,8 +55,6 @@ export default function App() {
         return <AboutPage onNavigate={handleNavigate} />;
       case 'how-it-works':
         return <HowItWorksPage onNavigate={handleNavigate} />;
-      case 'dashboard':
-        return <DashboardPage onNavigate={handleNavigate} />;
       case 'blog':
         return <BlogPage onNavigate={handleNavigate} />;
       case 'contact':
@@ -105,7 +102,7 @@ export default function App() {
       </main>
 
       {/* Footer */}
-      <footer className="bg-muted/50 border-t border-border">
+      <footer className="bg-gradient-to-r from-[#22553a] via-[#059669] to-[#aed581] border-t border-[#aed581]/30">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
             {/* Company Info */}
@@ -114,23 +111,23 @@ export default function App() {
                 <img 
                   src={climexaLogo} 
                   alt="Climexa AI " 
-                  className="h-16 w-auto"
+                  className="h-20 w-auto"
                 />
               </div>
-              <p className="text-muted-foreground max-w-md">
+              <p className="text-[#fafafa] max-w-md">
                 Transforming agriculture through AI-powered sustainable solutions. 
                 Building climate resilience for farms and communities worldwide.
               </p>
               <div className="space-y-2">
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-2 text-sm text-[#fafafa]">
                   <MapPin className="h-4 w-4" />
                   <span>United Kingdom</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-2 text-sm text-[#fafafa]">
                   <Phone className="h-4 w-4" />
                   <span>+44 7555 819582</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-2 text-sm text-[#fafafa]">
                   <Mail className="h-4 w-4" />
                   <span>info@climexaai.com</span>
                 </div>
@@ -139,13 +136,13 @@ export default function App() {
 
             {/* Footer Links */}
             <div className="space-y-4">
-              <h4 className="font-semibold">Company</h4>
+              <h4 className="font-semibold text-[#fafafa]">Company</h4>
               <ul className="space-y-2">
                 {footerLinks.company.map((link, index) => (
                   <li key={index}>
                     <button 
                       onClick={() => handleNavigate(link.page)}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-[#fafafa]/80 hover:text-[#fafafa] transition-colors"
                     >
                       {link.label}
                     </button>
@@ -155,13 +152,13 @@ export default function App() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-semibold">Solutions</h4>
+              <h4 className="font-semibold text-[#fafafa]">Solutions</h4>
               <ul className="space-y-2">
                 {footerLinks.solutions.map((link, index) => (
                   <li key={index}>
                     <button 
                       onClick={() => handleNavigate(link.page)}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-[#fafafa]/80 hover:text-[#fafafa] transition-colors"
                     >
                       {link.label}
                     </button>
@@ -171,13 +168,13 @@ export default function App() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-semibold">Resources</h4>
+              <h4 className="font-semibold text-[#fafafa]">Resources</h4>
               <ul className="space-y-2">
                 {footerLinks.resources.map((link, index) => (
                   <li key={index}>
                     <button 
                       onClick={() => handleNavigate(link.page)}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-[#fafafa]/80 hover:text-[#fafafa] transition-colors"
                     >
                       {link.label}
                     </button>
@@ -187,13 +184,13 @@ export default function App() {
             </div>
 
             <div className="space-y-4">
-              <h4 className="font-semibold">Legal</h4>
+              <h4 className="font-semibold text-[#fafafa]">Legal</h4>
               <ul className="space-y-2">
                 {footerLinks.legal.map((link, index) => (
                   <li key={index}>
                     <button 
                       onClick={() => handleNavigate(link.page)}
-                      className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      className="text-sm text-[#fafafa]/80 hover:text-[#fafafa] transition-colors"
                     >
                       {link.label}
                     </button>
@@ -208,38 +205,38 @@ export default function App() {
           {/* Newsletter Signup */}
           <div className="mb-8">
             <div className="max-w-md mx-auto lg:mx-0 space-y-4">
-              <h4 className="font-semibold">Stay Updated</h4>
-              <p className="text-sm text-muted-foreground">
+              <h4 className="font-semibold text-[#fafafa]">Stay Updated</h4>
+              <p className="text-sm text-[#fafafa]/80">
                 Subscribe to our newsletter for the latest updates and insights.
               </p>
               <div className="flex space-x-2">
                 <Input
                   type="email"
                   placeholder="Enter your email"
-                  className="flex-1"
+                  className="flex-1 bg-[#fafafa]/10 border-[#fafafa]/30 text-[#fafafa] placeholder:text-[#fafafa]/60"
                 />
-                <Button>Subscribe</Button>
+                <Button className="bg-[#fafafa] text-[#22553a] hover:bg-[#fafafa]/90">Subscribe</Button>
               </div>
             </div>
           </div>
 
-          <Separator className="my-8" />
+          <Separator className="my-8 bg-[#fafafa]/20" />
 
           {/* Bottom Footer */}
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
-            <div className="text-sm text-muted-foreground">
+            <div className="text-sm text-[#fafafa]/80">
               © 2025 Climexa AI ™. All rights reserved.
             </div>
             
             <div className="flex items-center space-x-4">
-              <span className="text-sm text-muted-foreground">Follow us:</span>
+              <span className="text-sm text-[#fafafa]/80">Follow us:</span>
               <div className="flex space-x-2">
-                <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-[#fafafa] hover:bg-[#fafafa]/20">
                   <a href="https://www.linkedin.com/in/climexa-ai" target="_blank" rel="noopener noreferrer">
                   <Linkedin className="h-4 w-4" />
                   </a>
                 </Button>
-                <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
+                <Button variant="ghost" size="sm" className="h-8 w-8 p-0 text-[#fafafa] hover:bg-[#fafafa]/20">
                   <Twitter className="h-4 w-4" />
                 </Button>
               </div>

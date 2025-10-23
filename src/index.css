@@ -4,82 +4,82 @@
 
 :root {
   --font-size: 14px;
-  --background: #ffffff; /* Clean white background */
-  --foreground: #1f2937; /* Dark gray text for readability */
-  --card: #ffffff; /* White cards with subtle shadows */
-  --card-foreground: #1f2937; /* Dark text on white cards */
-  --popover: #ffffff; /* White popovers */
-  --popover-foreground: #1f2937; /* Dark text on popovers */
-  --primary: #059669; /* Vibrant green for primary actions */
-  --primary-foreground: #ffffff; /* White text on green buttons */
-  --secondary: #f0fdf4; /* Very light green background */
-  --secondary-foreground: #059669; /* Vibrant green text on light green */
-  --muted: #f9fafb; /* Light gray background */
-  --muted-foreground: #6b7280; /* Muted gray text */
-  --accent: #10b981; /* Bright emerald green for accents */
-  --accent-foreground: #ffffff; /* White text on accent */
+  --background: #fafafa; /* Clean off-white background */
+  --foreground: #37474f; /* Dark gray text for readability */
+  --card: #fafafa; /* Off-white cards with subtle shadows */
+  --card-foreground: #37474f; /* Dark text on cards */
+  --popover: #fafafa; /* Off-white popovers */
+  --popover-foreground: #37474f; /* Dark text on popovers */
+  --primary: #059669; /* Primary green */
+  --primary-foreground: #fafafa; /* Off-white text on green buttons */
+  --secondary: #aed581; /* Light green background */
+  --secondary-foreground: #22553a; /* Dark green text on light green */
+  --muted: #fafafa; /* Off-white background */
+  --muted-foreground: #37474f; /* Muted dark gray text */
+  --accent: #22553a; /* Dark green accent */
+  --accent-foreground: #fafafa; /* Off-white text on accent */
   --destructive: #dc2626;
   --destructive-foreground: #ffffff;
-  --border: #e5e7eb; /* Light gray borders */
+  --border: #aed581; /* Light green borders */
   --input: transparent;
-  --input-background: #f9fafb; /* Light gray input background */
+  --input-background: #fafafa; /* Off-white input background */
   --switch-background: #059669;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
   --ring: #059669;
-  --chart-1: #059669; /* Vibrant primary green */
-  --chart-2: #10b981; /* Bright emerald green */
-  --chart-3: #34d399; /* Vibrant light green */
-  --chart-4: #047857; /* Deep emerald green */
-  --chart-5: #6ee7b7; /* Bright light green */
+  --chart-1: #059669; /* Primary green */
+  --chart-2: #22553a; /* Dark green */
+  --chart-3: #aed581; /* Light green */
+  --chart-4: #37474f; /* Dark gray */
+  --chart-5: #fafafa; /* Off-white */
   --radius: 0.75rem; /* Slightly more rounded for modern feel */
-  --sidebar: #ffffff; /* White sidebar */
-  --sidebar-foreground: #1f2937; /* Dark text on sidebar */
-  --sidebar-primary: #059669; /* Vibrant green for sidebar primary */
-  --sidebar-primary-foreground: #ffffff; /* White text on green */
-  --sidebar-accent: #f0fdf4; /* Light green for sidebar accent */
-  --sidebar-accent-foreground: #059669; /* Vibrant green text on light green */
-  --sidebar-border: #e5e7eb; /* Light gray border */
+  --sidebar: #fafafa; /* Off-white sidebar */
+  --sidebar-foreground: #37474f; /* Dark text on sidebar */
+  --sidebar-primary: #059669; /* Primary green for sidebar */
+  --sidebar-primary-foreground: #fafafa; /* Off-white text on green */
+  --sidebar-accent: #aed581; /* Light green for sidebar accent */
+  --sidebar-accent-foreground: #22553a; /* Dark green text on light green */
+  --sidebar-border: #aed581; /* Light green border */
   --sidebar-ring: #059669;
 }
 
 .dark {
-  --background: #0f172a; /* Dark blue-gray for dark mode */
-  --foreground: #f8fafc; /* Light text for dark mode */
-  --card: #1e293b; /* Dark cards */
-  --card-foreground: #f8fafc; /* Light text on dark cards */
-  --popover: #1e293b; /* Dark popovers */
-  --popover-foreground: #f8fafc; /* Light text on popovers */
-  --primary: #10b981; /* Vibrant emerald green for primary actions */
-  --primary-foreground: #000000; /* Black text on bright green */
-  --secondary: #1e293b; /* Dark secondary background */
-  --secondary-foreground: #10b981; /* Vibrant green text on dark background */
-  --muted: #334155; /* Muted dark background */
-  --muted-foreground: #94a3b8; /* Muted light text */
-  --accent: #34d399; /* Vibrant light green for accents */
-  --accent-foreground: #000000; /* Black text on bright green */
+  --background: #22553a; /* Dark green for dark mode */
+  --foreground: #fafafa; /* Off-white text for dark mode */
+  --card: #37474f; /* Dark gray cards */
+  --card-foreground: #fafafa; /* Off-white text on dark cards */
+  --popover: #37474f; /* Dark gray popovers */
+  --popover-foreground: #fafafa; /* Off-white text on popovers */
+  --primary: #aed581; /* Light green for primary actions */
+  --primary-foreground: #22553a; /* Dark green text on light green */
+  --secondary: #37474f; /* Dark gray secondary background */
+  --secondary-foreground: #aed581; /* Light green text on dark background */
+  --muted: #22553a; /* Dark green muted background */
+  --muted-foreground: #aed581; /* Light green muted text */
+  --accent: #059669; /* Primary green for accents */
+  --accent-foreground: #fafafa; /* Off-white text on accent */
   --destructive: #ef4444;
   --destructive-foreground: #ffffff;
-  --border: #334155; /* Dark borders */
+  --border: #37474f; /* Dark gray borders */
   --input: transparent;
-  --input-background: #334155; /* Dark input background */
-  --switch-background: #10b981;
+  --input-background: #37474f; /* Dark gray input background */
+  --switch-background: #aed581;
   --font-weight-medium: 500;
   --font-weight-normal: 400;
-  --ring: #10b981;
-  --chart-1: #10b981; /* Vibrant primary green */
-  --chart-2: #34d399; /* Bright emerald green */
-  --chart-3: #6ee7b7; /* Vibrant light green */
-  --chart-4: #059669; /* Deep emerald green */
-  --chart-5: #a7f3d0; /* Bright light green */
-  --sidebar: #0f172a; /* Dark sidebar */
-  --sidebar-foreground: #f8fafc; /* Light text on sidebar */
-  --sidebar-primary: #10b981; /* Vibrant green for sidebar primary */
-  --sidebar-primary-foreground: #000000; /* Black text on green */
-  --sidebar-accent: #1e293b; /* Dark for sidebar accent */
-  --sidebar-accent-foreground: #10b981; /* Vibrant green text on dark */
-  --sidebar-border: #334155; /* Dark border */
-  --sidebar-ring: #10b981;
+  --ring: #aed581;
+  --chart-1: #aed581; /* Light green */
+  --chart-2: #059669; /* Primary green */
+  --chart-3: #22553a; /* Dark green */
+  --chart-4: #37474f; /* Dark gray */
+  --chart-5: #fafafa; /* Off-white */
+  --sidebar: #22553a; /* Dark green sidebar */
+  --sidebar-foreground: #fafafa; /* Off-white text on sidebar */
+  --sidebar-primary: #aed581; /* Light green for sidebar primary */
+  --sidebar-primary-foreground: #22553a; /* Dark green text on light green */
+  --sidebar-accent: #37474f; /* Dark gray for sidebar accent */
+  --sidebar-accent-foreground: #aed581; /* Light green text on dark gray */
+  --sidebar-border: #37474f; /* Dark gray border */
+  --sidebar-ring: #aed581;
 }
 
 @theme inline {

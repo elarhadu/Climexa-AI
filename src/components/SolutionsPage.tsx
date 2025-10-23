@@ -94,28 +94,28 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
 
   const stats = [
     { 
-      label: "Water Waste Reduction", 
-      value: 40, 
-      suffix: "%", 
-      icon: <Droplets className="h-5 w-5 text-accent" /> 
+      label: "Significant Water Savings", 
+      value: "", 
+      suffix: "", 
+      icon: <Droplets className="h-5 w-5 text-green-500" /> 
     },
     { 
-      label: "Crop Yield Increase", 
-      value: 18, 
-      suffix: "%", 
+      label: "Improved Crop Yield and Consistency", 
+      value: "", 
+      suffix: "", 
       icon: <Wheat className="h-5 w-5 text-green-500" /> 
     },
     { 
-      label: "Post-Harvest Loss Reduction", 
-      value: 35, 
-      suffix: "%", 
-      icon: <Snowflake className="h-5 w-5 text-primary" /> 
+      label: "Reduced Post-Harvest Losses", 
+      value: "", 
+      suffix: "", 
+      icon: <Snowflake className="h-5 w-5 text-green-500" /> 
     },
     { 
-      label: "CO₂ Emissions Avoided", 
-      value: 2.5, 
-      suffix: " tons/year", 
-      icon: <Shield className="h-5 w-5 text-accent" /> 
+      label: "Lower Carbon Footprint and Cleaner Energy Use", 
+      value: "", 
+      suffix: "", 
+      icon: <Shield className="h-5 w-5 text-green-500" /> 
     }
   ];
 
@@ -169,18 +169,12 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
           {/* Stats */}
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
             {stats.map((stat, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 group">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 group bg-gradient-to-br from-green-50 to-green-100 border-green-200">
                 <CardContent className="pt-6">
-                  <div className="flex justify-center mb-2 group-hover:scale-110 transition-transform duration-300">
+                  <div className="flex justify-center mb-4 group-hover:scale-110 transition-transform duration-300">
                     {stat.icon}
                   </div>
-                  <Counter 
-                    value={stat.value} 
-                    suffix={stat.suffix}
-                    className="text-2xl font-bold text-primary"
-                    duration={2000 + (index * 200)}
-                  />
-                  <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
+                  <div className="text-sm font-semibold text-green-800">{stat.label}</div>
                 </CardContent>
               </Card>
             ))}
@@ -252,13 +246,13 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
       </section>
 
       {/* Why Climexa AI Is Different */}
-      <section className="py-20 bg-muted/50">
+      <section className="py-20 bg-gradient-to-br from-green-100 to-green-200">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center space-y-6 max-w-4xl mx-auto mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold">
+            <h2 className="text-3xl sm:text-4xl font-bold text-green-900">
               Why Climexa AI Is Different
             </h2>
-            <p className="text-lg text-muted-foreground">
+            <p className="text-lg text-green-700">
               Our integrated approach sets us apart from traditional agricultural solutions 
               by creating a complete ecosystem that works together seamlessly.
             </p>
@@ -266,11 +260,11 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
             {differentiators.map((item, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300">
+              <Card key={index} className="text-center hover:shadow-lg transition-all duration-300 bg-white border-green-200 hover:border-green-300">
                 <CardContent className="pt-6">
                   <div className="text-4xl mb-4">{item.icon}</div>
-                  <h3 className="text-xl font-semibold mb-2">{item.title}</h3>
-                  <p className="text-muted-foreground">{item.description}</p>
+                  <h3 className="text-xl font-semibold mb-2 text-green-900">{item.title}</h3>
+                  <p className="text-green-700">{item.description}</p>
                 </CardContent>
               </Card>
             ))}
@@ -344,7 +338,7 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary to-secondary text-primary-foreground">
+      <section className="py-20 bg-gradient-to-r from-green-600 to-green-700 text-white">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="max-w-3xl mx-auto space-y-6">
             <h2 className="text-3xl sm:text-4xl font-bold">
@@ -359,15 +353,15 @@ export function SolutionsPage({ onNavigate }: SolutionsPageProps) {
                 variant="secondary" 
                 size="lg"
                 onClick={() => onNavigate('contact')}
-                className="text-base"
+                className="text-base bg-white text-green-700 hover:bg-green-50"
               >
                 Schedule Consultation
               </Button>
               <Button 
                 variant="outline" 
                 size="lg"
-                onClick={() => onNavigate('dashboard')}
-                className="text-base border-primary-foreground text-primary hover:bg-primary-foreground hover:text-primary"
+                onClick={() => onNavigate('contact')}
+                className="text-base border-white text-green-700 hover:bg-white hover:text-green-700"
               >
                 View Platform Demo
               </Button>
