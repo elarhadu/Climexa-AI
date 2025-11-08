@@ -7,48 +7,17 @@ import {
   Target, 
   Eye, 
   Heart, 
-  Linkedin, 
-  Mail,
   Users,
   // Award,
   // Globe,
   Lightbulb
 } from 'lucide-react';
-import Naa from "../assets/naa.jpeg"
-import Manuel from "../assets/manuel.jpeg"
-import Emmanuella from "../assets/emmanuella.jpeg"
 
 interface AboutPageProps {
   onNavigate: (page: string) => void;
 }
 
 export function AboutPage({ onNavigate }: AboutPageProps) {
-  const teamMembers = [
-    {
-      name: "Naa Okailey El-Cathedral Narh",
-      role: "CEO & Co-Founder",
-      bio: "Dedicated to addressing energy challenges in Africa by developing sustainable and innovative solutions that empower underserved communities and drive meaningful societal impact.",
-      image: Naa,
-      linkedin: "https://www.linkedin.com/in/naa-okailey-ayitey/",
-      email: "naaokailey.ayitey.noa@gmail.com"
-    },
-    {
-      name: "Manuel El-Cathedral Narh",
-      role: "COO & Co-Founder",
-      bio: "Passionate about driving transformative change across Africa, leveraging innovation and sustainable solutions to create meaningful impact for communities.",
-      image: Manuel,
-      linkedin: "https://www.linkedin.com/in/manuel-tetteh-narh/",
-      email: "t.emmanuellilastan@gmail.com"
-    },
-    {
-      name: "Emmanuella Adu",
-      role: "CTO & Co-Founder",
-      bio: "Passionate about building data-driven solutions to optimize sustainable farming and advance climate-smart agriculture.",
-      image: Emmanuella, 
-      linkedin: "https://www.linkedin.com/in/emmanuella-adu/",
-      email: "elarhadu@gmail.com"
-    }
-  ];
 
   const values = [
     {
@@ -261,54 +230,6 @@ export function AboutPage({ onNavigate }: AboutPageProps) {
                   <CardDescription className="text-base">
                     {value.description}
                   </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Team Section */}
-      <section className="py-20 bg-muted/50">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-4 mb-16">
-            <h2 className="text-3xl sm:text-4xl font-bold">
-              Meet Our Founding Team
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Our diverse team brings together expertise in climate science, artificial intelligence, 
-              agriculture, and sustainable technology.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {teamMembers.map((member, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardHeader className="pb-4">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full overflow-hidden">
-                    <ImageWithFallback
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardTitle className="text-lg">{member.name}</CardTitle>
-                  <Badge variant="outline" className="text-xs">
-                    {member.role}
-                  </Badge>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-sm">
-                    {member.bio}
-                  </CardDescription>
-                  <div className="flex justify-center space-x-2">
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                      <Linkedin className="h-4 w-4" />
-                    </Button>
-                    <Button variant="ghost" size="sm" className="h-8 w-8 p-0">
-                      <Mail className="h-4 w-4" />
-                    </Button>
-                  </div>
                 </CardContent>
               </Card>
             ))}
